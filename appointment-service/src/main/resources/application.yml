@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    config:
+      enabled: true
+      fail-fast: false  #
+  config:
+    import: configserver:http://localhost:8888
+  application:
+    name: appointment-service
